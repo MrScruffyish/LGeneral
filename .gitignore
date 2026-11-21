@@ -1,0 +1,4 @@
+# SVN's local base-copy cache. It is regenerated from the remote repository
+# when needed and was intentionally dropped to keep this checkout compact.
+lgeneral-svn/.svn/pristine/
+lgeneral-svn/.svn/tmp/

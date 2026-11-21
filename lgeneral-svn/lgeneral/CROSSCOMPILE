@@ -1,0 +1,36 @@
+some scratch notes...
+
+Get cygwin and in addition to base system install
+mingw64-i686-SDL/mixer
+mingw64-i686-gcc-core/debuginfo
+automake
+make
+along with all dependencies
+
+i686-w64-mingw32-gcc is the 32 bit compiler
+
+for configure.ac:
+use hardcoded win32 dnl stuff to disable nls and for sdl
+
+autoconf (maybe aclocal before needed because of GETTEXT macro)
+
+CFLAGS="-DWIN32" ./configure --build=i686-w64-mingw32 --host=i686-w64-mingw32 --disable-install
+
+make
+
+util library needs manual binding:
+i686-w64-mingw32-ar cru libutil.a localize.o hashtable.o hashtable_itr.o hashtable_utility.o paths.o portability.o
+
+Copy dlls from /usr/i686-w64-mingw32/sys-root/mingw/bin
+SDL.dll
+SDL_mixer.dll
+iconv.dll
+libFLAC-8.dll
+libgcc_s_sjlj-1.dll
+libintl-8.dll
+libmikmod-3.dll
+libogg-0.dll
+libvorbis-0.dll
+libvorbisfile-3.dll
+libwinpthread-1.dll
+

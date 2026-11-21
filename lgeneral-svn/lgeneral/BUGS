@@ -1,0 +1,11 @@
+There are a lot of things going wrong when switching status in modes:
+- like unit menu into strat map into editing (because unit buttons still
+shown) will result in no more menu on the left.
+- or you can click unit list, then vic conditions then exit and everything
+is open although the status is none...
+- switching to status none should close ALL open windows. right now it does
+not because it is used in the totally wrong way... what did I do way back then?!?
+
+Switching fullscreen/window too many times will result fullscreen
+with mouse cursor that can only move in window size area. Seems to
+an SDL bug.
